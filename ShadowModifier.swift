@@ -64,16 +64,16 @@ struct ShadowModifier: View {
                 Stepper {
                     Text(selectedType == 0 ? "Horizontal offset:" : "Primary horizontal offset")
                 } onIncrement: {
-                    playgroundModel.shadowX += 1
+                    playgroundModel.shadowX += 10
                 } onDecrement: {
-                    playgroundModel.shadowX -= 1
+                    playgroundModel.shadowX -= 10
                 }
                 Stepper {
                     Text(selectedType == 0 ? "Vertical offset:" : "Primary vertical offset")
                 } onIncrement: {
-                    playgroundModel.shadowY += 1
+                    playgroundModel.shadowY += 10
                 } onDecrement: {
-                    playgroundModel.shadowY -= 1
+                    playgroundModel.shadowY -= 10
                 }
                 if selectedType == 1 {
                     ColorPicker(selection: $secondaryShadowColor) {
@@ -83,16 +83,16 @@ struct ShadowModifier: View {
                     Stepper {
                         Text("Secondary horizontal offset")
                     } onIncrement: {
-                        secondaryShadowX += 1
+                        secondaryShadowX += 10
                     } onDecrement: {
-                        secondaryShadowX -= 1
+                        secondaryShadowX -= 10
                     }
                     Stepper {
                         Text("Secondary vertical offset")
                     } onIncrement: {
-                        secondaryShadowY += 1
+                        secondaryShadowY += 10
                     } onDecrement: {
-                        secondaryShadowY -= 1
+                        secondaryShadowY -= 10
                     }
                     AnimationModifier {
                         playgroundModel.shadowColor = secondaryShadowColor
